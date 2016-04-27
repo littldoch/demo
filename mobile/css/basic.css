@@ -32,3 +32,22 @@ li {
 
 .fr {
   float: right; }
+
+#backtop{
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: right;
+  position: fixed;
+  right: 5px;
+  bottom: 10px;
+  z-index: 100;
+  display: none;
+}
+
+
+#backtop img{
+  width: 100%;
+  height: auto;
+  float: right;
+}
