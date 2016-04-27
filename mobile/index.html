@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>生源闪购触屏版</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" >
+	<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+	<link rel="stylesheet" href="css/basic.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="js/zepto.min.js"></script>
+	<script src="js/TouchSlide.1.1.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	
+</head>
+<body>
+	<div class="main">
+	<!--                     s=头部广告                 -->
+		<div class="head">
+			<a href="" class="head-bg"><img src="images/index/img1.jpg"></a>
+			<a href="#" class="close"><img src="images/png5.png"></a>
+	 	</div>
+	 <!--                     e=头部广告                 -->
+
+
+	 <!--                     s=搜索框及门店分类                 -->
+	 	<div class="header-back">
+
+	 		<div class="header-back-left">
+	 			<span class="mendian-text">郴州店</span>
+ 				<a href="#"><img src="images/index/png3.png"></a>
+	 		</div>
+	 		<div class="header-back-right">
+	 			<div class="fenlei">
+	 				<span>分类</span>
+					<a href=""><img src="images/index/png1.png"></a>
+	 			</div>
+	 		</div>
+	 		<div class="header-back-middle">
+		 		<div class="search">
+		 			<a href="#"><img src="images/index/png2.png" /></a>
+		 			<input class="searchborder" type="text"  value="搜索生源闪购商品" />
+		 		</div>
+	 		</div>
+	 	</div>
+
+	 	<!--                     e=搜索框及门店分类                 -->
+		
+
+
+
+		<!--                     s=banner                 -->
+		<div id="slider" class="slider">
+			<div class="hd">
+				<ul></ul>
+			</div>
+			<div class="bd">
+				<ul id="ulList">
+					
+						<li><a href="themes/fresh.html"><img src="images/index/banner1.png" style="width:100%; max-width:640px; min-width:320px; height:auto;z-index:1" id="imgHeight"/></a></li>
+					
+						<li><a href="themes/baby.html"><img src="images/index/banner2.png" style="width:100%; max-width:640px; min-width:320px; height:auto;z-index:1" id="imgHeight"/></a></li>
+					
+						<li><a href="themes/milk.html"><img src="images/index/banner3.png" style="width:100%; max-width:640px; min-width:320px; height:auto;z-index:1" id="imgHeight"/></a></li>
+					
+				</ul>
+			</div>
+		</div>
+
+
+
+		<script type="text/javascript">
+
+		<!--                                     s=banner滚动                                    -->
+		$(function(){
+				TouchSlide({
+				slideCell : "#slider",
+				titCell : ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+				mainCell : ".bd ul",
+				effect : "leftLoop",
+				autoPlay : true,//自动播放
+				autoPage : true, //自动分页
+				switchLoad : "_src" //切换加载，真实图片路径为"_src" 
+			});
+		});
+
+		<!--                                     e=banner滚动                                    -->
+			var intDiff = parseInt(10);//倒计时总秒数量
+
+				function timer(intDiff){
+				window.setInterval(function(){
+				var day=0,
+					hour=0,
+					minute=0,
+					second=0;//时间默认值		
+				if(intDiff > 0){
+					day = Math.floor(intDiff / (60 * 60 * 24));
+					hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+					minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+					second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+				}
+				if (minute <= 9) minute = '0' + minute;
+				if (second <= 9) second = '0' + second;
+				$('#h').html('<s id="h"></s>'+hour);
+				$('#m').html('<s id="m"></s>'+minute);
+				$('#s').html('<s id="s"></s>'+second);
+				intDiff--;
+				}, 1000);
+			}
+
+
+
+			$(function(){
+					timer(intDiff);
+
+				});
+					
+
+
+		</script>
+		<!--                           e=banner                       -->
+
+
+
+
+		<!--                     s=导航                             -->
+		<div class="enter-nav">
+					<a class="card" href="#">一卡通</a>
+					<a class="order" href="#">订单</a>
+					<a class="shopcart" href="#">购物车</a>
+					<a class="myhome" href="#">我的</a>	
+					<a class="prize" href="#">抽奖</a>
+					<a class="seckill" href="#">秒杀</a>
+					<a class="integral" href="#">积分</a>
+					<a class="wholesale" href="#">批发</a>			
+		</div>
+
+		<!--                     e=导航                             -->
+
+
+		<!--                     s=主体                             -->
+		<div class="module fl">
+		
+
+
+
+		<!--                     s=热门活动                     -->
+			<div class="hot">
+				<h1>热门活动</h1>
+				<div class="hot-themes">
+					<a href=""><img src="images/index/img7.jpg" ></a>
+					<a href=""><img src="images/index/img8.jpg" ></a>
+				</div>
+			</div>
+			
+		
+		<!--                e=热门活动                       -->
+
+
+		<!--                 s=精致生活                          -->
+
+			<div class="jingzhilife">
+				<div class="title">
+					<h1>精致生活，尽我所能</h1>
+				</div>
+				<div class="zhuanqu">
+					<a href="" class="cheap"><img src="images/index/img11.jpg"></a>
+					<a href="" class="wine"><img src="images/index/img9.jpg"></a>
+					<a href="" class="specialty"><img src="images/index/img10.jpg"></a>
+				</div>
+			</div>
+
+			<!--                 e=精致生活                          -->
+
+			<!--                 s=价格打折                          -->
+				<div class="cheaper">
+					<div class="title">
+						<h1>价格打折，品质不折</h1>
+					</div>
+					<div class="left">
+						<a href=""><img src="images/index/img14.jpg" ></a>
+					</div>
+
+					<div class="right">
+						<a class="food" href=""><img src="images/index/img12.jpg" alt=""></a>
+						<a class="necessities" href=""><img src="images/index/img13.jpg" ></a>
+					</div>
+				</div>
+
+
+			<!--                 e=价格打折                          -->
+
+
+
+			<!--                 s=金牌秒杀                          -->
+				<div class="jp-sekill">
+					<div class="left">
+						<div class="text">
+							<div class="daojishi">
+								<div class="shupai">
+									<s>还</s><s>剩</s>
+								</div>
+								<div class="shijian">			
+									<div id="s"></div><s>:</s>
+									<div id="m"></div><s>:</s>
+									<div id="h"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div  class="middle">
+						<a class="middle-bg" href=""><img src="images/index/img15.jpg" alt=""></a>
+						<div class="product1">
+							<img src="images/index/png6.png">
+							<span>￥:1000.00</span>
+						</div>
+					</div>
+					<div  class="right">
+						<a class="right-bg" href=""><img src="images/index/img16.jpg" alt=""></a>
+						<div class="product2">
+							<img src="images/index/png6.png">
+							<span>￥:1.00</span>
+						</div>
+					</div>
+				</div>
+			<!--                 e=金牌秒杀                          -->
+
+
+					
+			<!--                 s=四大实惠                         -->
+
+			<!-- 	<div class="shihui">
+					<a href=""><img src="images/index/img12.jpg"></a>
+					<a href=""><img src="images/index/img12.jpg" ></a>
+					<a href=""><img src="images/index/img13.jpg"></a>
+					<a href=""><img src="images/index/img13.jpg"></a>
+				</div> -->
+
+
+			<!--                 e=四大实惠                          -->
+
+
+			<!--                 s=生鲜与进口                       -->
+				<div class="shengxian-jinkou">
+					<a href=""><img src="images/index/img22.jpg"></a>
+					<a href=""><img src="images/index/img23.jpg"></a>
+				</div>
+			<!--                 e=生鲜与进口                      -->
+
+
+
+			<!--                 e=主题街开始                      -->
+				<div class="theme-street">
+					<div class="title">
+						<h1>主题街</h1>
+					</div>
+					<div class="themes">
+						<a href=""><img src="images/index/img24.jpg" href="#"></a>
+						<a href=""><img src="images/index/img25.jpg" href="#"></a>
+						<a href=""><img src="images/index/img26.jpg" href="#"></a>
+						<a href=""><img src="images/index/img27.jpg" href="#"></a>
+						<a href=""><img src="images/index/img28.jpg" href="#"></a>
+						<a href=""><img src="images/index/img29.jpg" href="#"></a>
+						<a href=""><img src="images/index/img30.jpg" href="#"></a>
+						<a href=""><img src="images/index/img31.jpg" href="#"></a>
+						<a href=""><img src="images/index/img32.jpg" href="#"></a>
+					</div>
+				</div>
+
+			<!--                 e=主题街  结束                      -->
+
+
+
+			<!--                 e=猜你喜欢开始                      -->
+				<div class="recommend">
+					<div class="title">
+						<h1>猜你喜欢</h1>
+					</div>
+					<div class="recommend-product">
+					<ul>
+						<li>
+							<a href=""><img src="images/index/img33.jpg" href="#"></a>
+							<p>雪莲果</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+
+						<li>
+							<a href=""><img src="images/index/img34.jpg" href="#"></a>
+							<p>精品红石榴</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+
+						<li>
+							<a href=""><img src="images/index/img35.jpg" href="#"></a>
+							<p>黄元帅</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+
+						<li>
+							<a href=""><img src="images/index/img36.jpg" href="#"></a>
+							<p>上海青</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+
+						<li>
+							<a href=""><img src="images/index/img37.jpg" href="#"></a>
+							<p>土豆</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+
+						<li>
+							<a href=""><img src="images/index/img38.jpg" href="#"></a>
+							<p>洋葱</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+
+						<li>
+							<a href=""><img src="images/index/img39.jpg" href="#"></a>
+							<p>湾仔码头水饺</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+
+						<li>
+							<a href=""><img src="images/index/img40.jpg" href="#"></a>
+							<p>思念面点王馒头</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+
+						<li>
+							<a href=""><img src="images/index/img41.jpg" href="#"></a>
+							<p>三全叉烧包</p>
+							<div class="content">
+								<span>￥:5.00</span>
+								<a id="shopcart" href=""><img src="images/png7.png"></a>
+							</div>
+						</li>
+					</ul>
+					</div>
+		
+				</div>
+
+			<!--                 e=猜你喜欢  结束                      -->
+				<div class="footer">
+					<div class="left">触屏版</div>
+					<div class="middle">电脑版</div>
+					<div class="right">客户端</div>
+					<span class="version">©生源闪购&nbsp;shengyuan.cn</span>
+				</div>
+		</div>
+		<!--                     e=主体   结束                          -->
+	 </div>
+</body>
+</html>
