@@ -193,6 +193,8 @@ body{
   /*           banner开始         */
   .slider{ 
     width:100%; 
+    min-width: 320px;
+    max-width: 640px;
     margin:0 auto; 
     position:relative; 
     overflow:hidden; 
