@@ -343,19 +343,3 @@ body{
 	/*border: 1px solid #fff;*/
 }
 
-
-.backtop{
-	width: 12%;
-	display: block;
-	float: right;
-	position: fixed;
-	bottom: 5px;
-	right: 5px;
-}
-
-
-.backtop img{
-	width: 100%;
-	height: auto;
-	float: right;
-}

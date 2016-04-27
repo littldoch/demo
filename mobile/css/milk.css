@@ -280,21 +280,4 @@ margin-top: 3%;
 /*      产品列表结束      */
 
 
-#backtop{
-	width: 40px;
-	height: 40px;
-	display: block;
-	float: right;
-	position: fixed;
-	right: 5px;
-	bottom: 10px;
-	z-index: 100;
-	display: none;
-}
 
-
-#backtop img{
-	width: 100%;
-	height: auto;
-	float: right;
-}
