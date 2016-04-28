@@ -3,11 +3,6 @@ $().ready(function(){
 	$('#backtop').click(function(){
 		$(window).scrollTop(0);
 	});
-
-	$('.close').click(function(){
-		$('.head').hide();
-	});
-	
 });
 
 
